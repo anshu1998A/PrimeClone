@@ -1,30 +1,32 @@
+import imagePath from '../constants/imagePath';
+
 export default MostPopular = [
    {
       key: '1',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/fir1.webp')
+      uri: imagePath.pop1
    },
    {
       key: '2',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/nemo.jpg')
+      uri: imagePath.pop2
    },
    {
       key: '3',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/parasite.jpg')
+      uri: imagePath.pop3
    },
    {
       key: '4',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/peppa1.jpg')
+      uri: imagePath.pop4
    },
    {
       key: '5',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/popular1.jpeg')
+      uri: imagePath.pop5
    },
    {
       key: '6',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/puspa.jpeg')
+      uri: imagePath.pop6
    },
    {
       key: '7',
-      uri: require('../assets/images/MoviesImages/MostPopularImages/Undekhi.jpg')
+      uri: imagePath.pop7
    },
 ]

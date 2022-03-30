@@ -1,34 +1,36 @@
+import imagePath from '../constants/imagePath'
+
 export default Recommend = [
     {
         key: '1',
-        uri: require('../assets/images/MoviesImages/RecommendImages/FastAndFurious6.jpg')
+        uri: imagePath.recom1
      },
      {
         key: '2',
-        uri: require('../assets/images/MoviesImages/RecommendImages/fastfurious.jpg')
+        uri: imagePath.recom2
      },
      {
         key: '3',
-        uri: require('../assets/images/MoviesImages/RecommendImages/Kuruthi.jpg')
+        uri: imagePath.recom3
      },
      {
         key: '4',
-        uri: require('../assets/images/MoviesImages/RecommendImages/Sandhu1.jpeg')
+        uri: imagePath.recom4
      },
      {
         key: '5',
-        uri: require('../assets/images/MoviesImages/RecommendImages/Sufna1.jpg')
+        uri: imagePath.recom5
      },
      {
         key: '6',
-        uri: require('../assets/images/MoviesImages/RecommendImages/Telgu.png')
+        uri: imagePath.recom6
      },
      {
         key: '7',
-        uri: require('../assets/images/MoviesImages/RecommendImages/Upload.jpg')
+        uri: imagePath.recom7
      },
      {
         key: '8',
-        uri: require('../assets/images/MoviesImages/RecommendImages/wrongTurn.jpeg')
+        uri: imagePath.recom8
      },
 ]

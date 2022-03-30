@@ -60,6 +60,16 @@ export default StyleSheet.create({
         fontWeight: '500',
         fontSize: 14,
     },
+    downloadMain:
+    { backgroundColor: '#123456',
+     marginBottom: 5, 
+     flexDirection: 'row' 
+    },
+    subViewStyle:{ position: 'absolute', bottom: 0, left: 0, backgroundColor: 'grey', opacity: 0.9, height: 5, width: '100%' },
+    childView:{ position: 'absolute', bottom: 0, left: 0, backgroundColor: '#00BFFF', opacity: 1, height: 5, width: '30%' },
+    flatListstyle:{ color: 'white', fontSize: 18, fontWeight: '800', paddingBottom: 7 },
+    primeText:{ fontWeight: '800', color: '#3BB9FF' },
+    seeMore:{ position: 'absolute', bottom: 10, right:10, },
     textStyle: {
         marginLeft: 20,
         color: 'white',

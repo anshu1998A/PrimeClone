@@ -1,21 +1,23 @@
+import imagePath from "../constants/imagePath"
+
 export default laguageData = [
     {
         key: '1',
-        uri: require('../assets/images/MoviesImages/LanguageImages/English.jpg')
+        uri: imagePath.english
      },
     {
         key: '2',
-        uri: require('../assets/images/MoviesImages/LanguageImages/Hindi.png')
+        uri: imagePath.hindi
     },
     {
         key: '3',
-        uri: require('../assets/images/MoviesImages/LanguageImages/punajbiLogo.jpeg')
+        uri: imagePath.punjabi
     },
     {
         key: '4',
-        uri: require('../assets/images/MoviesImages/LanguageImages/Telugu.jpg')
+        uri: imagePath.telugu
     }, {
         key: '5',
-        uri: require('../assets/images/MoviesImages/LanguageImages/Tamil.jpeg')
+        uri: imagePath.telugu
      },
 ]

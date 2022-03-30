@@ -1,7 +1,10 @@
 import { View, Text,FlatList, Image } from 'react-native'
 import React from 'react';
+import { useState } from 'react';
 import Styles from '../styles/secondStyle';
 import { Divider } from 'react-native-elements/dist/divider/Divider';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import imagePath from '../constants/imagePath';
 
 
 const List1 = [
@@ -27,7 +30,36 @@ const List1 = [
     },
 
   ];
+
+  const SeMore = ()=>{
+  
+  return(
+    <FlatList
+    data={List1}
+    renderItem={(element) => {
+      return (
+        <>
+        <View style={Styles.listViewStyle}>
+          <Text style={Styles.listStyle}>{element.item.title}</Text>
+          <Image source={require('../assets/images/ICONS/rightArrow.png')} style={Styles.arrowStyle}></Image>
+        </View>
+        <Divider/>
+        </>
+      )
+    }}
+    />
+  )
+  
+  }
+
 export default function List() {
+  const [text,setText] = useState('See More')
+
+  function SeeMore(){
+    if(text==='See More')
+    setText("")
+
+  }
   return (
       <View style={{marginLeft:20, marginRight:20, marginBottom:20}}>
     <View style={Styles.listMarginStyle}>
@@ -41,15 +73,20 @@ export default function List() {
         <>
         <View style={Styles.listViewStyle}>
           <Text style={Styles.listStyle}>{element.item.title}</Text>
-          <Image source={require('../../assets/images/ICONS/rightArrow.png')} style={Styles.arrowStyle}></Image>
+          <Image source={imagePath.rightarrow} style={Styles.arrowStyle}></Image>
         </View>
         <Divider/>
         </>
       )
     }}
-    // numColumns={2}
     />
-    <Text style={Styles.style1}>See More</Text>
+    {
+      text?null:<SeMore/>
+    }
+    <TouchableOpacity onPress={SeeMore}>
+    <Text style={Styles.style1}>{text}</Text>
+
+    </TouchableOpacity>
     </View>
   )
 }

@@ -3,9 +3,7 @@ import { Text, View, SafeAreaView, Image, ImageBackground, TouchableOpacity } fr
 import LinearGradient from 'react-native-linear-gradient';
 import homeStyle from '../styles/homePageStyle';
 import { Divider } from 'react-native-elements';
-import Styles from '../styles/secondStyle';
-import {createAppContainer} from 'react-navigation';
-import {createDrawerNavigator} from 'react-navigation-drawer';
+import imagePath from '../constants/imagePath';
 
 
 
@@ -19,15 +17,15 @@ function Header({navigation}) {
         <SafeAreaView >
             <View style={homeStyle.profileView}>
                 <View> 
-                    <Image source={require('../assets/images/MoviesImages/MenuIcons/profile.png')} style={homeStyle.profileImageStyle}></Image>
+                    <Image source={imagePath.profileIcon} style={homeStyle.profileImageStyle}></Image>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={homeStyle.profileName}>Anshu</Text>
-                    <Image source={require('../assets/images/MoviesImages/MenuIcons/expandArrow.png')} style={homeStyle.expandArrow}></Image>
+                    <Image source={imagePath.expandArrow} style={homeStyle.expandArrow}></Image>
                 </View >
                 <View style={homeStyle.settingStyle}>
                 <TouchableOpacity onPress={()=>{navigation.navigate('Settings')}}>
-                    <Image source={require('../assets/images/MoviesImages/MenuIcons/setting.png')} style={homeStyle.settingIcon}></Image>
+                    <Image source={imagePath.settingIcon} style={homeStyle.settingIcon}></Image>
                     </TouchableOpacity>
                 </View>
             </View >

@@ -8,7 +8,7 @@ import {
   import Styles from '../styles/secondStyle'
   import SearchBar from '../Components/SearchBar';
   import Browse from '../Components/Browse';
-  import List from '../Components/Language';
+  import List from '../Components/List';
   import Language from '../Components/Language';
   import { StatusBar } from 'react-native';
   import LinearGradient from 'react-native-linear-gradient';

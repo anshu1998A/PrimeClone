@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, Image } from 'react-native'
 import React from 'react';
 import homeStyle from '../styles/homePageStyle';
 import Styles from '../styles/secondStyle';
+import imagePath from '../constants/imagePath';
 
 export default function LoginHeader() {
   return (

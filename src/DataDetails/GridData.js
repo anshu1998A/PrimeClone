@@ -1,3 +1,6 @@
+import imagePath from '../constants/imagePath'
+
+
 export default grid=[
 {
     key: '1',

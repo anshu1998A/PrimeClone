@@ -1,28 +1,31 @@
+import imagePath from '../constants/imagePath'
+
+
 export default watching =[
     {
         key: '1',
-        uri: require('../assets/images/MoviesImages/ContinueWatch/HIT.jpg')
+        uri: imagePath.watch1
      },
      {
         key: '2',
-        uri: require('../assets/images/MoviesImages/ContinueWatch/jumanji1.jpg')
+        uri: imagePath.watch2
      },
      {
         key: '3',
-        uri: require('../assets/images/MoviesImages/ContinueWatch/Jungle.jpg')
+        uri: imagePath.watch3
      },
          
      {
         key: '4',
-        uri: require('../assets/images/MoviesImages/ContinueWatch/Sufna.jpg')
+        uri: imagePath.watch4
      },
      {
         key: '5',
-        uri: require('../assets/images/MoviesImages/ContinueWatch/TheWilds.jpeg')
+        uri: imagePath.watch5
      },
 
      {
         key: '6',
-        uri: require('../assets/images/MoviesImages/ContinueWatch/tomjerry.jpg')
+        uri: imagePath.watch6
      },
 ]

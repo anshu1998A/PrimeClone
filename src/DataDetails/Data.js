@@ -1,33 +1,36 @@
+import imagePath from '../constants/imagePath'
+
+
 export default Data = [
     {
         key: '1',
-        uri: require('../assets/images/MoviesImages/awake.jpg')
+        uri: imagePath.add1
      },
     {
         key: '2',
-        uri: require('../assets/images/MoviesImages/DUNKIRN.jpg')
+        uri: imagePath.add2
     },
     {
         key: '3',
-        uri: require('../assets/images/MoviesImages/master.jpeg')
+        uri: imagePath.add3
     },
     {
         key: '4',
-        uri: require('../assets/images/MoviesImages/penguin.jpeg')
+        uri: imagePath.add4
     }, {
         key: '5',
-        uri: require('../assets/images/MoviesImages/awake.jpg')
+        uri: imagePath.add5
      },
     {
         key: '6',
-        uri: require('../assets/images/MoviesImages/DUNKIRN.jpg')
+        uri: imagePath.add6
     },
     {
         key: '7',
-        uri: require('../assets/images/MoviesImages/master.jpeg')
+        uri: imagePath.add7
     },
     {
         key: '8',
-        uri: require('../assets/images/MoviesImages/penguin.jpeg')
+        uri: imagePath.add8
     },
 ]

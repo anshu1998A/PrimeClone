@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Styles from '../styles/secondStyle';
@@ -6,14 +6,15 @@ import Styles from '../styles/secondStyle';
 export default function LogInFooter() {
   return (
     <View>
+      <TouchableOpacity >
       <LinearGradient
-            
             colors={['#706e6b','#242322']}
             style={Styles.footerGradient}>
                 <View style={Styles.newAccount}>
                 <Text style={Styles.newTextStyle}> create a new Amazon account</Text>
                 </View>
       </LinearGradient>
+      </TouchableOpacity>
 <View style={Styles.footerViewStyle}>
 <Text style={Styles.footerTextStyle}>Conditions of Use</Text>
 <Text style={Styles.footerTextStyle}> privacy</Text>
