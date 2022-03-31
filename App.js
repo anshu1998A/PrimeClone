@@ -5,6 +5,7 @@ import {
   StatusBar,
   View,Text,Image
 } from 'react-native';
+import Routes from './src/navigation/Route';
 import HeaderStackScreen from './src/navigation/StackNav'
 // import 'react-native-gesture-handler';
 
@@ -13,9 +14,7 @@ const App = () => {
   return (
     <>
     <StatusBar barStyle='light-content' backgroundColor={"black"}> </StatusBar>
-    <NavigationContainer>
-    <HeaderStackScreen />
-    </NavigationContainer>
+    <Routes/>
     </>
   )
 };

@@ -7,13 +7,14 @@ import SearchScreen from '../Screens/Search';
 import MyStuff from '../Screens/MyStuff';
 import HomeTab from './TopHomeNav';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import imagePath from '../constants/imagePath';
 
 
 const Tab = createBottomTabNavigator()
 
 const BottomTabNav = () =>{
   return (
-    <Tab.Navigator 
+    <Tab.Navigator initialRouteName='Home'
     tabBarOptions={{
        activeBackgroundColor: 'black',
        inactiveBackgroundColor: 'black',
@@ -23,21 +24,21 @@ const BottomTabNav = () =>{
            }
     }}>
         <Tab.Screen  name="Home" component={HomeTab} options={{ tabBarLabelStyle:{color:'#00A8E1'}, headerShown:false, tabBarIcon:({focused})=>(
-          <Image source={require('../assets/images/MoviesImages/MenuIcons/home.png')} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey',}}/>
+          <Image source={imagePath.home} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey',}}/>
         )
       }} />
         <Tab.Screen name="Channel" component={Channel} options={{tabBarLabelStyle:{color:'#00A8E1'}, headerShown:false, tabBarIcon:({focused})=>(
-          <Image source={require('../assets/images/MoviesImages/MenuIcons/menu.png')} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey'}}/>
+          <Image source={imagePath.menu} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey'}}/>
         )
       }}/>
         <Tab.Screen name="Find" component={SearchScreen} options={{ tabBarLabelStyle:{color:'#00A8E1'}, headerShown:false, tabBarIcon:({focused})=>(
-          <Image source={require('../assets/images/MoviesImages/MenuIcons/search.png')} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey'}}/>
+          <Image source={imagePath.search} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey'}}/>
         )}}/>
         <Tab.Screen name="Downoads" component={Downloads} options={{ tabBarLabelStyle:{color:'#00A8E1'}, headerShown:false, tabBarIcon:({focused})=>(
-          <Image source={require('../assets/images/MoviesImages/MenuIcons/download.png')} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey'}}/>
+          <Image source={imagePath.download} style={{ height:25,width:25, tintColor:focused?'#00A8E1':'grey'}}/>
         )}}/>
         <Tab.Screen name="My Stuff" component={MyStuff} options={{ tabBarLabelStyle:{color:'#00A8E1'}, headerShown:false, tabBarIcon:({focused})=>(
-          <Image source={require('../assets/images/MoviesImages/MenuIcons/profile.png')} style={{ height:25,width:25, }}/>
+          <Image source={imagePath.profileIcon} style={{ height:25,width:25, }}/>
         )}}/>
     </Tab.Navigator>
  

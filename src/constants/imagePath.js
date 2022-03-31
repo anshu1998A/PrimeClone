@@ -12,6 +12,7 @@ export default imagePath = {
     menu: require('../assets/images/ICONS/menu.png'),
     search: require('../assets/images/ICONS/search.png'),
     smile: require('../assets/images/MoviesImages/MenuIcons/smile.png'),
+    download: require('../assets/images/MoviesImages/MenuIcons/download.png'),
 
     // add images
     add1: require('../assets/images/MoviesImages/awake.jpg'),
