@@ -8,7 +8,10 @@ export default imagePath = {
     microPhone: require('../assets/images/ICONS/microphone.png'),
     rightarrow: require('../assets/images/ICONS/rightArrow.png'),
     downloadImg: require('../assets/images/MoviesImages/downloadVideo.jpeg'),
-
+    home: require('../assets/images/ICONS/home.png'),
+    menu: require('../assets/images/ICONS/menu.png'),
+    search: require('../assets/images/ICONS/search.png'),
+    smile: require('../assets/images/MoviesImages/MenuIcons/smile.png'),
 
     // add images
     add1: require('../assets/images/MoviesImages/awake.jpg'),
@@ -19,6 +22,7 @@ export default imagePath = {
     add6: require('../assets/images/MoviesImages/DUNKIRN.jpg'),
     add7: require('../assets/images/MoviesImages/master.jpeg'),
     add8: require('../assets/images/MoviesImages/penguin.jpeg'),
+
 
     // Continue watch Images
     watch1: require('../assets/images/MoviesImages/ContinueWatch/HIT.jpg'),

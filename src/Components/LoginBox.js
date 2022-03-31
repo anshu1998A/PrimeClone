@@ -6,8 +6,6 @@ import Styles from '../styles/secondStyle';
 import Divider from 'react-native-divider';
 
 
-
-
 export default function LoginBox({ navigation }) {
     const [agree, setAgree] = useState(false);
 
@@ -35,9 +33,9 @@ export default function LoginBox({ navigation }) {
                     style={Styles.checkBoxStyle}
                     boxType="square"
                     value={agree}
-                    onChange={handleCheckbox}/>
+                    onChange={handleCheckbox} />
 
-<Text style={Styles.showStyle}> Show password</Text>
+                <Text style={Styles.showStyle}> Show password</Text>
             </View>
 
             <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
@@ -49,8 +47,8 @@ export default function LoginBox({ navigation }) {
                 <Text style={Styles.conditonText}>By continuing, you agree to Amazon's Conditions of Use and privacy Notice.</Text>
             </View>
             <Divider orientation="middle" >
-              <Text style={{color:"grey", fontSize:18}}>  New to Amazon?</Text>
-                </Divider>
+                <Text style={Styles.amazonText}>  New to Amazon?</Text>
+            </Divider>
         </View>
     )
 }

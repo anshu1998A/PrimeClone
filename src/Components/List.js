@@ -41,7 +41,7 @@ const List1 = [
         <>
         <View style={Styles.listViewStyle}>
           <Text style={Styles.listStyle}>{element.item.title}</Text>
-          <Image source={require('../assets/images/ICONS/rightArrow.png')} style={Styles.arrowStyle}></Image>
+          <Image source={imagePath.rightarrow} style={Styles.arrowStyle}></Image>
         </View>
         <Divider/>
         </>
@@ -61,7 +61,7 @@ export default function List() {
 
   }
   return (
-      <View style={{marginLeft:20, marginRight:20, marginBottom:20}}>
+      <View style={Styles.listStyle1}>
     <View style={Styles.listMarginStyle}>
       <Text style={Styles.textStyle}>Genres</Text>
       <Divider />

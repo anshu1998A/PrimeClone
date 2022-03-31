@@ -14,6 +14,10 @@ const Styles = StyleSheet.create({
     height: 30,
     width: 30,
   },
+  logoStyle1: {
+    height: 20,
+    width: 20
+  },
   searchView: {
     marginTop: 20,
     marginLeft: 20,
@@ -129,6 +133,11 @@ const Styles = StyleSheet.create({
     paddingTop: 10
 
   },
+  listStyle1: {
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 20
+  },
   detailsView: {
     paddingLeft: 20,
     paddingBottom: 10
@@ -179,24 +188,25 @@ const Styles = StyleSheet.create({
     fontSize: 20,
     color: 'white'
   },
+  languageStyle: { marginLeft: 20, marginRight: 20, marginBottom: 20 },
   checkBoxStyle: {
     alignSelf: "center",
     height: 25,
-    paddingRight:20,
-    marginRight:20,
+    paddingRight: 20,
+    marginRight: 20,
     width: 25,
     marginTop: 20,
   },
   checkView: {
     flexDirection: 'row',
-    marginLeft:20,
+    marginLeft: 20,
 
     // justifyContent:'space-evenly'
   },
-  showStyle:{
-    marginTop:25,
-    color:'white',
-    fontSize:15
+  showStyle: {
+    marginTop: 25,
+    color: 'white',
+    fontSize: 15
   },
   conditionView: {
     backgroundColor: '#3b3737',
@@ -224,6 +234,7 @@ const Styles = StyleSheet.create({
     color: '#adaaa6',
     fontSize: 18,
   },
+  amazonText: { color: "grey", fontSize: 18 },
   newAccount: {
     width: '90%',
     marginLeft: 20,

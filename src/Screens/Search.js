@@ -20,7 +20,6 @@ import {
             end={{ x: 0.5, y: 0.7 }}
             style={Styles.linearGradient}>
               <StatusBar barStyle='light-content' backgroundColor={"black"}> </StatusBar>
-              {/* <StatusBar backgroundColor={'black'}/> */}
               <SafeAreaView style={{ flex: 1}}>
               <ScrollView >
             <SearchBar />

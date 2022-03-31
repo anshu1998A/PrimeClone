@@ -1,8 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react';
-import { setting } from '../Screens/setting';
+import { setting } from '../Screens/Setting';
 import Header from '../Components/Header';
-import MyStuff from '../Screens/MyStuff';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomTabNav from '../navigation/BottomTabNav';
 import Login from '../Screens/Login';

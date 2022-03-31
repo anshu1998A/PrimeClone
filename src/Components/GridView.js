@@ -21,7 +21,6 @@ export default function grid() {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           data={GridData}
-          // numColumns = {2}
 
           renderItem={(element) => {
             return (

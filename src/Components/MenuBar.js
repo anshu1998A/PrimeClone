@@ -5,6 +5,7 @@ import {
   View,
   SafeAreaView,
 } from 'react-native';
+import imagePath from '../constants/imagePath';
 import Styles from '../Styles';
 
 export default function MenuBar() {
@@ -12,15 +13,15 @@ export default function MenuBar() {
     <SafeAreaView >
       <View style={Styles.MenuContainerStyle}>
       <View>
-        <Image source={require('../ICONS/home.png')} style={Styles.menuStyle} />
+        <Image source={imagePath.home} style={Styles.menuStyle} />
         <Text style={Styles.MenuText}>Home</Text>
       </View>
       <View>
-        <Image source={require('../ICONS/menu.png')} style={Styles.menuStyle} />
+        <Image source={imagePath.menu} style={Styles.menuStyle} />
         <Text style={Styles.MenuText}>Channel</Text>
       </View>
       <View>
-        <Image source={require('../ICONS/search.png')} style={Styles.menuStyle} />
+        <Image source={imagePath.search} style={Styles.menuStyle} />
         <Text style={Styles.MenuText}>Find</Text>
       </View>
       <View>
