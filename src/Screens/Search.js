@@ -12,7 +12,7 @@ import {
   import Language from '../Components/Language';
   import { StatusBar } from 'react-native';
   import LinearGradient from 'react-native-linear-gradient';
-  const Search = () => {
+  const Search = ({navigation}) => {
     return (  
             <LinearGradient
             colors={['#1CB5E0', '#000046']}
@@ -23,7 +23,7 @@ import {
               <SafeAreaView style={{ flex: 1}}>
               <ScrollView >
             <SearchBar />
-            <Browse />
+            <Browse navigation={navigation}/>
             <List />
             <Language/>
             </ScrollView>

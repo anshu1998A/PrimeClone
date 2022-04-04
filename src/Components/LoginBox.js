@@ -7,17 +7,16 @@ import Divider from 'react-native-divider';
 
 
 export default function LoginBox({ navigation }) {
-    const [agree, setAgree] = useState(false);
+    const [check, unCheck] = useState(false);
 
     const handleCheckbox = () => {
-        if (agree === false) {
-            setAgree(true)
+        if (check=== false) {
+            unCheck(true)
 
         } else {
-            setAgree(false)
+            unCheck(false)
         }
     }
-    console.log(agree);
 
     return (
         <View>
@@ -32,7 +31,7 @@ export default function LoginBox({ navigation }) {
                 <CheckBox
                     style={Styles.checkBoxStyle}
                     boxType="square"
-                    value={agree}
+                    value={check}
                     onChange={handleCheckbox} />
 
                 <Text style={Styles.showStyle}> Show password</Text>

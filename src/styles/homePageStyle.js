@@ -10,7 +10,7 @@ export default StyleSheet.create({
         height: 30,
         fontWeight: '700',
         fontSize: 15,
-        marginTop:20,
+        // marginTop:20,
         marginTop:30,
         marginBottom: 20,
         color: 'white',
@@ -186,7 +186,7 @@ export default StyleSheet.create({
         marginBottom: 5,
     },
     downloadStyle: {
-        marginTop: 10,
+        // marginTop: 50,
         color: 'white',
         fontWeight: '900',
         fontSize: 18,

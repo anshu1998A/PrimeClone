@@ -128,9 +128,11 @@ const Styles = StyleSheet.create({
     color: 'grey',
     fontSize: 13
   },
+ 
   tittleView: {
     paddingHorizontal: 20,
-    paddingTop: 10
+    paddingTop: 10,
+    marginVertical: 20,
 
   },
   listStyle1: {
@@ -150,6 +152,7 @@ const Styles = StyleSheet.create({
     backgroundColor: '#4a4846',
     width: '90%',
     height: 50,
+    // marginTop:10,
     borderColor: 'gray',
     borderWidth: 0.5,
   },
@@ -157,12 +160,21 @@ const Styles = StyleSheet.create({
     marginLeft: 10,
     width: "40%",
     color: 'white',
+    
   },
+  // placeHolderStyle:
   tittletext: {
     color: 'white',
     fontSize: 25,
+    marginBottom:10,
     fontWeight: '700',
     marginLeft: 18
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   },
   forgotText: {
     marginBottom: 20,
@@ -265,6 +277,43 @@ const Styles = StyleSheet.create({
   copyRightView: {
     marginTop: 10,
     alignSelf: 'center'
+  },
+
+  // SignUp ..............
+  signUpTittletext:{
+    color: 'white',
+    fontSize: 22,
+    marginBottom:10,
+    fontWeight: '600',
+    marginLeft: 18
+  },
+  signUpView:{
+    backgroundColor: '#3b3737',
+    marginLeft: 20,
+    marginBottom:15,
+    flexDirection: 'row',
+    backgroundColor: '#4a4846',
+    width: '90%',
+    borderRadius:4,
+    height: 50,
+    // marginTop:10,
+    borderColor: 'gray',
+    borderWidth: 0.5,
+  }, 
+  accountText:{
+    color: '#3090C7',
+    fontSize: 18,
+  },
+  accountView:{
+    justifyContent:'center',
+    alignItems:'center',
+    marginVertical: 20
+  },
+  messageText:{
+    fontSize:19,
+    fontWeight:'700',
+    color:'white',
+    marginLeft:20,
   }
 });
 

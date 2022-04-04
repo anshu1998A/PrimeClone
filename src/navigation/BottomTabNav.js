@@ -14,12 +14,14 @@ const Tab = createBottomTabNavigator()
 
 const BottomTabNav = () =>{
   return (
+
+
     <Tab.Navigator initialRouteName='Home'
     tabBarOptions={{
        activeBackgroundColor: 'black',
        inactiveBackgroundColor: 'black',
            style: {
-                //  backgroundColor: 'black',
+                 backgroundColor: 'red',
                  paddingBottom: 3
            }
     }}>

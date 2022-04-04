@@ -3,10 +3,10 @@ import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Styles from '../styles/secondStyle';
 
-export default function LogInFooter() {
+export default function LogInFooter({navigation}) {
   return (
     <View>
-      <TouchableOpacity >
+      <TouchableOpacity onPress={() => {navigation.navigate('SignUp')}}>
       <LinearGradient
             colors={['#706e6b','#242322']}
             style={Styles.footerGradient}>

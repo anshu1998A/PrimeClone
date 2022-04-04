@@ -9,7 +9,7 @@ export default function Login({navigation}) {
     <View style={{ backgroundColor: '#3b3737', flex:1}}>
       <LoginHeader />
       <LoginBox navigation={navigation}/>
-      <LogInFooter/>
+      <LogInFooter navigation={navigation}/>
     </View>
 
   )
