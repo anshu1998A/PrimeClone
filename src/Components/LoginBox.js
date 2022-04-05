@@ -5,18 +5,20 @@ import CheckBox from '@react-native-community/checkbox';
 import Styles from '../styles/secondStyle';
 import Divider from 'react-native-divider';
 
-
 export default function LoginBox({ navigation }) {
-    const [check, unCheck] = useState(false);
 
-    const handleCheckbox = () => {
-        if (check=== false) {
-            unCheck(true)
 
-        } else {
-            unCheck(false)
-        }
-    }
+    const [check, unCheck] = useState(false)
+
+    // const handleCheckbox = () => {
+    //     if (check === false) 
+    //     {
+    //         unCheck(true)
+    //     }
+    //     else {
+    // unCheck(false)
+    //     }
+    // }
 
     return (
         <View>
@@ -32,7 +34,7 @@ export default function LoginBox({ navigation }) {
                     style={Styles.checkBoxStyle}
                     boxType="square"
                     value={check}
-                    onChange={handleCheckbox} />
+                    />
 
                 <Text style={Styles.showStyle}> Show password</Text>
             </View>
@@ -45,7 +47,7 @@ export default function LoginBox({ navigation }) {
             <View style={Styles.conditionView}>
                 <Text style={Styles.conditonText}>By continuing, you agree to Amazon's Conditions of Use and privacy Notice.</Text>
             </View>
-            <Divider orientation="middle" >
+            <Divider orientation='center' >
                 <Text style={Styles.amazonText}>  New to Amazon?</Text>
             </Divider>
         </View>

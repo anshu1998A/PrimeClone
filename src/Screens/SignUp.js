@@ -5,20 +5,62 @@ import { Text, View, Image, SafeAreaView, TextInput, TouchableOpacity } from 're
 import CheckBox from '@react-native-community/checkbox';
 import Styles from '../styles/secondStyle';
 import homeStyle from '../styles/homePageStyle';
-import { color } from 'react-native-reanimated';
 
 
 export default function SignUp({ navigation }) {
+    const [emailEnter, SetEmailEnter] = useState('');
+    const [passwordEnter, setPasswordEnter] = useState('');
+    const [confirmPass, setConfirmPass] = useState('')
 
     const [check, unCheck] = useState(false);
-    const [number, onChangeNumber] = React.useState(null);
+    const [email, setEmail] = useState(false);
+    const [password, setPassword] = useState(false);
+    const [cPass, SetcPass] = useState(false);
+    const [errorPass, setErrorPass] = useState(false)
 
-    const handleCheckbox = () => {
-        if (check === false) {
-            unCheck(true)
+    const emailRegex = /^[\w-\.\_\$]+@([\w]{3,5}\.)[\w]{2,4}$/;
+    // const phoneRegex = /^ [0-9]{10}$/;
+    const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{8,})");
 
+    const Details = () => {
+        if (emailRegex.test(emailEnter)) {
+            setEmail(false)
+            
+            if (strongRegex.test(passwordEnter)) {
+                setPassword(false)
+                SetcPass(false)
+
+
+                if (passwordEnter === confirmPass) {
+                    setErrorPass(false)
+                    navigation.navigate('LogIn')
+                }
+
+                else {
+                    setErrorPass(true)
+                }
+            }
+            else {
+                setPassword(true)
+            }
+        }
+        else 
+        {
+            setEmail(true)
+            setPassword(true)
+            SetcPass(true)
+        }
+
+    }
+
+
+    const [passwordVisible, setPasswordVisible] = useState(true)
+
+    function handleCheck() {
+        if (passwordVisible) {
+            setPasswordVisible(false)
         } else {
-            unCheck(false)
+            setPasswordVisible(true)
         }
     }
 
@@ -29,45 +71,73 @@ export default function SignUp({ navigation }) {
                 <Image style={homeStyle.logoStyle} source={require('../assets/images/MoviesImages/MenuIcons/smile.png')}></Image>
             </View>
 
-            {/* <TextInput
-                style={Styles.input}
-                onChangeText={onChangeNumber}
-                value={number}
-                placeholder="useless placeholder"
-                keyboardType="numeric"
-            /> */}
             <Text style={Styles.signUpTittletext}>Sign-Up with your Mobile number</Text>
+
             <View style={Styles.signUpView}>
-                <TextInput placeholder='Email or phone number' placeholderTextColor={'grey'} style={Styles.placeHolderStyle} ></TextInput>
+                <TextInput
+                    placeholder='Email or phone number'
+                    placeholderTextColor={'grey'}
+                    style={Styles.placeHolderStyle}
+                    onChangeText={
+                        (value) => SetEmailEnter(value)
+                    } ></TextInput>
             </View>
+            {
+                email ? <Text style={{ textAlign: 'center', color: 'red' }}>Email should not be empty</Text> : null
+            }
             <View style={Styles.signUpView}>
-                <TextInput placeholder='Set your password' placeholderTextColor={'grey'} style={Styles.placeHolderStyle}></TextInput>
+                <TextInput placeholder='Set your password' placeholderTextColor={'grey'}
+                    secureTextEntry={passwordVisible}
+                    onChangeText={
+                        (value) => setPasswordEnter(value)
+                    } style={Styles.placeHolderStyle}></TextInput>
             </View>
+            {
+                password ? <Text style={{ textAlign: 'center', color: 'red' }}>password should not be empty</Text> : null
+            }
             <View style={Styles.signUpView}>
-                <TextInput placeholder='Confirm your password' placeholderTextColor={'grey'} style={Styles.placeHolderStyle}></TextInput>
+                <TextInput placeholder='Confirm your password' placeholderTextColor={'grey'}
+                    secureTextEntry={passwordVisible} onChangeText={
+                        (value) => setConfirmPass(value)} style={Styles.placeHolderStyle}></TextInput>
             </View>
+            {
+                cPass ? <Text style={{ textAlign: 'center', color: 'red' }}>password should not be empty</Text> : null
+            }
+
+
+            {
+
+                errorPass ? <Text style={{ textAlign: 'center', color: 'red' }}> password does not match</Text> : null
+            }
             <View style={Styles.checkView}>
 
                 <CheckBox
+                    // onPress={handleCheck}
                     style={Styles.checkBoxStyle}
                     boxType="square"
                     value={check}
-                    onChange={handleCheckbox} />
+                    onChange={handleCheck} />
 
                 <Text style={Styles.showStyle}> Show password</Text>
             </View>
 
 
-            <View style={Styles.signInView}>
-                <Text style={Styles.signInText}>Create Account</Text>
-            </View>
-            <TouchableOpacity onPress={() => { navigation.navigate('LogIn') }}>
-                <View style={Styles.accountView}>
 
-                    <Text style={Styles.accountText}>Already have an account?</Text>
+
+            <TouchableOpacity onPress={Details}>
+                <View style={Styles.signInView}>
+                    <Text style={Styles.signInText}>Create Account</Text>
+                </View>
+            </TouchableOpacity>
+
+            
+                <View style={Styles.accountView}>
+                <TouchableOpacity >
+                    <Text style={Styles.accountText} onPress={() => { navigation.navigate('LogIn') }}>Already have an account?</Text>
+                    </TouchableOpacity>
                 </View>
 
-            </TouchableOpacity>
+         
 
             <View>
                 <Text style={Styles.messageText}>
