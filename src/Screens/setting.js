@@ -5,8 +5,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Styles from '../styles/secondStyle';
 import ToggleButton from '../Components/ToggleButton';
 import { Divider } from 'react-native-elements';
+import { useDispatch } from 'react-redux';
+import { logOut } from '../redux/Actions/auth';
 
-export function setting({ navigation }) {
+function Setting({ navigation }) {
 
   function click(tittle) {
     console.log(tittle.key)
@@ -57,6 +59,7 @@ export function setting({ navigation }) {
 
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+ const dispatch= useDispatch()
 
   return (
     <LinearGradient
@@ -99,7 +102,7 @@ export function setting({ navigation }) {
             <Divider style={Styles.dividerSetting} />
 
 
-            <TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
+            <TouchableOpacity onPress={()=> dispatch(logOut()) }>
            <Text style={Styles.settingDataTittle}> Signed in as Anshu </Text>
             <Text style={Styles.settingDataDetails}> Sign out of all Amazon apps  </Text>
             <Divider style={Styles.dividerSetting} />
@@ -149,3 +152,4 @@ export function setting({ navigation }) {
   )
 }
 
+export default Setting

@@ -31,7 +31,7 @@ function Header({ navigation }) {
                                 </View>
                             </TouchableOpacity>
                             <View style={homeStyle.settingStyle}>
-                                <TouchableOpacity onPress={() => { navigation.navigate('Settings') }} >
+                                <TouchableOpacity onPress={() => { navigation.navigate('Setting') }} >
                                     <Image source={imagePath.settingIcon} style={homeStyle.settingIcon}>
                                     </Image>
                                 </TouchableOpacity>

@@ -117,16 +117,21 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 10,
-    marginBottom: 10
+    // marginBottom: 10
   },
   settingDataTittle: {
     color: 'white',
     fontWeight: '600',
-    fontSize: 15
+    fontSize: 15,
+    marginTop:20
   },
   settingDataDetails: {
     color: 'grey',
-    fontSize: 13
+    fontSize: 13,
+    // marginBottom:20
+  },
+  dividerSetting:{
+    padding:7,
   },
  
   tittleView: {

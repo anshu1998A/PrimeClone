@@ -1,18 +1,14 @@
 import React, { useState } from 'react'
-import { Text, View, Image, SafeAreaView, TextInput, TouchableOpacity } from 'react-native'
-
-
+import { Text, View, Image, SafeAreaView, TextInput, TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import Styles from '../styles/secondStyle';
 import homeStyle from '../styles/homePageStyle';
-
 
 export default function SignUp({ navigation }) {
     const [emailEnter, SetEmailEnter] = useState('');
     const [passwordEnter, setPasswordEnter] = useState('');
     const [confirmPass, setConfirmPass] = useState('')
-
-    const [check, unCheck] = useState(false);
+    // const [check, unCheck] = useState(false);
     const [email, setEmail] = useState(false);
     const [password, setPassword] = useState(false);
     const [cPass, SetcPass] = useState(false);
@@ -47,8 +43,8 @@ export default function SignUp({ navigation }) {
         else 
         {
             setEmail(true)
-            setPassword(true)
-            SetcPass(true)
+            // setPassword(true)
+            // SetcPass(true)
         }
 
     }
@@ -115,7 +111,7 @@ export default function SignUp({ navigation }) {
                     // onPress={handleCheck}
                     style={Styles.checkBoxStyle}
                     boxType="square"
-                    value={check}
+                    // value={check}
                     onChange={handleCheck} />
 
                 <Text style={Styles.showStyle}> Show password</Text>
