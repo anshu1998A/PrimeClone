@@ -1,6 +1,6 @@
 export default imagePath = {
     // screen icons
-    appLogo: require('../assets/images/MoviesImages/MenuIcons/more.png'),
+    seeMore: require('../assets/images/MoviesImages/MenuIcons/more.png'),
     profileIcon: require('../assets/images/MoviesImages/MenuIcons/profile.png'),
     expandArrow: require('../assets/images/MoviesImages/MenuIcons/expandArrow.png'),
     settingIcon: require('../assets/images/MoviesImages/MenuIcons/setting.png'),

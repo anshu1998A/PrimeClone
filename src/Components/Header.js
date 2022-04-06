@@ -4,6 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import homeStyle from '../styles/homePageStyle';
 import { Divider } from 'react-native-elements';
 import imagePath from '../constants/imagePath';
+import navigationString from '../navigation/navigationString';
 
 
 function Header({ navigation }) {
@@ -31,7 +32,7 @@ function Header({ navigation }) {
                                 </View>
                             </TouchableOpacity>
                             <View style={homeStyle.settingStyle}>
-                                <TouchableOpacity onPress={() => { navigation.navigate('Setting') }} >
+                                <TouchableOpacity onPress={() => { navigation.navigate(navigationString.SETTING) }} >
                                     <Image source={imagePath.settingIcon} style={homeStyle.settingIcon}>
                                     </Image>
                                 </TouchableOpacity>
@@ -44,7 +45,7 @@ function Header({ navigation }) {
 
                     <Divider width={1} />
                     <View style={homeStyle.subView}>
-                        <Text style={{ color: '#838996', fontSize: 17, }}>your videos</Text>
+                        <Text style={homeStyle.videoText}>your videos</Text>
                         <TouchableOpacity >
                             <View style={homeStyle.filterView}>
                                 <Text style={{ color: 'white' }}>Filter</Text>

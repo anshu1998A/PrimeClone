@@ -10,7 +10,7 @@ import imagePath from '../constants/imagePath';
 export default function DownloadedV() {
   return (
       <ScrollView style={{backgroundColor:'#232F3E'}} >
-  <View style={{paddingBottom:220, }}>
+  <View style={{paddingBottom:250, }}>
     <FlatList
       data={DownloadData}
       renderItem={(element) => {
@@ -28,7 +28,7 @@ export default function DownloadedV() {
               <Text style={homeStyle.primeText}>prime</Text>
               </View>
               <View style={homeStyle.seeMore}>
-                <Image source={imagePath.appLogo} style={{ height: 20, width: 20 }} />
+                <Image source={imagePath.seeMore} style={homeStyle.seeMoreStyle} />
               </View>
             
           </View>

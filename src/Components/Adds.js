@@ -20,7 +20,7 @@ function Adds() {
             data={Data}
             renderItem={(element) => {
               return (
-                <Image style={homeStyle.addStyles} source={element.item.uri}></Image> //render images from another file
+                <Image style={homeStyle.addStyles} source={element.item.uri}></Image>
               )
             }} />
         </View>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Styles from '../styles/secondStyle';
 import { Divider } from 'react-native-elements/dist/divider/Divider';
 import imagePath from '../constants/imagePath';
+import homeStyle from '../styles/homePageStyle';
 
 
 const Language = [
@@ -36,9 +37,9 @@ const Language = [
     renderItem={(element) => {
       return (
       <>
-        <View style={Styles.listViewStyle}>
-          <Text style={Styles.listStyle}>{element.item.title}</Text>
-          <Image source={imagePath.rightarrow} style={Styles.arrowStyle}></Image>
+        <View style={homeStyle.listViewStyle}>
+          <Text style={homeStyle.listStyle}>{element.item.title}</Text>
+          <Image source={imagePath.rightarrow} style={homeStyle.arrowStyle}></Image>
         </View>
         <Divider/>
         </>
@@ -57,9 +58,9 @@ export default function Language1() {
 
   }
   return (
-      <View style={Styles.languageStyle}>
-    <View style={Styles.listMarginStyle}>
-      <Text style={Styles.textStyle}>Languages</Text>
+      <View style={homeStyle.languageStyle}>
+    <View style={homeStyle.listMarginStyle}>
+      <Text style={homeStyle.textStyle}>Languages</Text>
       <Divider />
     </View>
     <FlatList
@@ -67,9 +68,9 @@ export default function Language1() {
     renderItem={(element) => {
       return (
       <>
-        <View style={Styles.listViewStyle}>
-          <Text style={Styles.listStyle}>{element.item.title}</Text>
-          <Image source={imagePath.rightarrow} style={Styles.arrowStyle}></Image>
+        <View style={homeStyle.listViewStyle}>
+          <Text style={homeStyle.listStyle}>{element.item.title}</Text>
+          <Image source={imagePath.rightarrow} style={homeStyle.arrowStyle}></Image>
         </View>
         <Divider/>
         </>
@@ -80,7 +81,7 @@ export default function Language1() {
       text?null:<SeMore/>
     }
     <TouchableOpacity onPress={SeeMore}>
-    <Text style={Styles.style1}>{text}</Text>
+    <Text style={homeStyle.style1}>{text}</Text>
 
     </TouchableOpacity>
     </View>

@@ -7,7 +7,7 @@ import DownloadedV from '../Components/DownloadedV';
 function MyStuff({navigation}) {
   return (
     
-<View style={{backgroundColor:'black'}}>
+<View>
   <Header navigation={navigation}/>
   <DownloadedV/>
 </View>

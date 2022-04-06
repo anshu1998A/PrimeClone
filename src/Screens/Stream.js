@@ -4,7 +4,7 @@ function Stream() {
   return (
     <>
     <View>
-    <Text>hii my name is anshul</Text>
+    <Text>This is stream screen</Text>
     </View>
       </>
   )

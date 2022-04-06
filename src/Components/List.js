@@ -5,6 +5,7 @@ import Styles from '../styles/secondStyle';
 import { Divider } from 'react-native-elements/dist/divider/Divider';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import imagePath from '../constants/imagePath';
+import homePageStyle from '../styles/homePageStyle';
 
 
 const List1 = [
@@ -39,9 +40,9 @@ const List1 = [
     renderItem={(element) => {
       return (
         <>
-        <View style={Styles.listViewStyle}>
-          <Text style={Styles.listStyle}>{element.item.title}</Text>
-          <Image source={imagePath.rightarrow} style={Styles.arrowStyle}></Image>
+        <View style={homePageStyle.listViewStyle}>
+          <Text style={homePageStyle.listStyle}>{element.item.title}</Text>
+          <Image source={imagePath.rightarrow} style={homePageStyle.arrowStyle}></Image>
         </View>
         <Divider/>
         </>
@@ -49,7 +50,6 @@ const List1 = [
     }}
     />
   )
-  
   }
 
 export default function List() {
@@ -61,9 +61,9 @@ export default function List() {
 
   }
   return (
-      <View style={Styles.listStyle1}>
-    <View style={Styles.listMarginStyle}>
-      <Text style={Styles.textStyle}>Genres</Text>
+      <View style={homePageStyle.listStyle1}>
+    <View style={homePageStyle.listMarginStyle}>
+      <Text style={homePageStyle.textStyle}>Genres</Text>
       <Divider />
     </View>
     <FlatList
@@ -71,9 +71,9 @@ export default function List() {
     renderItem={(element) => {
       return (
         <>
-        <View style={Styles.listViewStyle}>
-          <Text style={Styles.listStyle}>{element.item.title}</Text>
-          <Image source={imagePath.rightarrow} style={Styles.arrowStyle}></Image>
+        <View style={homePageStyle.listViewStyle}>
+          <Text style={homePageStyle.listStyle}>{element.item.title}</Text>
+          <Image source={imagePath.rightarrow} style={homePageStyle.arrowStyle}></Image>
         </View>
         <Divider/>
         </>

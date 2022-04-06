@@ -4,6 +4,8 @@ import Styles from '../styles/secondStyle'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Stream from '../Screens/Stream';
 import Movies from '../Screens/MoviesS';
+import navigationString from '../navigation/navigationString';
+import homeStyle from '../styles/homePageStyle';
 
 
 // FlatList data for options----------
@@ -30,14 +32,14 @@ const DATA = [
 ];
 export default function Browse({navigation}) {
 
-// click on flatList
+// ---------------------------------------------------------------click on flatList------------------------------------------------
 
 function select(tittle){
 
   switch (tittle.id) 
   {
     case '1':
-      navigation.navigate('Movies')
+      navigation.navigate(navigationString.MOVIES)
       break;
 default:
         console.log(tittle.tittle)
@@ -48,22 +50,20 @@ default:
 
   return (
     <View style={{marginLeft:20}}>
-      <View style={Styles.marginStyle}
+      <View style={homeStyle.marginStyle}
       
       
       >
-        <Text style={Styles.textStyle}>Browse by</Text>
+        <Text style={homeStyle.textStyle}>Browse by</Text>
       </View>
       <View>
         <FlatList
-          // horizontal={true}
-          // showsHorizontalScrollIndicator={false}
           data={DATA}
           renderItem={(element) => {
             return (
-              <View style={Styles.gridView}>
+              <View style={homeStyle.gridView}>
                 <TouchableOpacity onPress={() => select(element.item)}>
-                <Text style={Styles.textGerne} numberOfLines={2}>{element.item.title}</Text>
+                <Text style={homeStyle.textGerne} numberOfLines={2}>{element.item.title}</Text>
                 </TouchableOpacity>
                 
               </View>

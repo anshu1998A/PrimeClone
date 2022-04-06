@@ -1,5 +1,5 @@
-import React , {useState}from 'react';
-import { Text, ScrollView, View, FlatList, TouchableOpacity ,Switch,} from 'react-native';
+import React, { useState } from 'react';
+import { Text, ScrollView, View, FlatList, TouchableOpacity, Switch, } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Styles from '../styles/secondStyle';
@@ -59,7 +59,7 @@ function Setting({ navigation }) {
 
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
- const dispatch= useDispatch()
+  const dispatch = useDispatch()
 
   return (
     <LinearGradient
@@ -81,12 +81,12 @@ function Setting({ navigation }) {
             <Text style={Styles.settingDataDetails}> On </Text>
             <Divider style={Styles.dividerSetting} />
 
-            <View style={{flexDirection:"row"}}>
-            <View style={{flex:0.85}}>
-              <Text style={Styles.settingDataTittle}> Auto Play</Text>
-              <Text style={Styles.settingDataDetails}> Play the next episode automatically</Text>
-            </View>
-            <ToggleButton/>
+            <View style={{ flexDirection: "row" }}>
+              <View style={{ flex: 0.85 }}>
+                <Text style={Styles.settingDataTittle}> Auto Play</Text>
+                <Text style={Styles.settingDataDetails}> Play the next episode automatically</Text>
+              </View>
+              <ToggleButton />
             </View>
             <Divider style={Styles.dividerSetting} />
 
@@ -102,10 +102,10 @@ function Setting({ navigation }) {
             <Divider style={Styles.dividerSetting} />
 
 
-            <TouchableOpacity onPress={()=> dispatch(logOut()) }>
-           <Text style={Styles.settingDataTittle}> Signed in as Anshu </Text>
-            <Text style={Styles.settingDataDetails}> Sign out of all Amazon apps  </Text>
-            <Divider style={Styles.dividerSetting} />
+            <TouchableOpacity onPress={() => dispatch(logOut())}>
+              <Text style={Styles.settingDataTittle}> Signed in as Anshu </Text>
+              <Text style={Styles.settingDataDetails}> Sign out of all Amazon apps  </Text>
+              <Divider style={Styles.dividerSetting} />
             </TouchableOpacity>
 
             <Text style={Styles.settingDataTittle}> Manage your Prime Video Channels </Text>

@@ -7,7 +7,9 @@ import Divider from 'react-native-divider';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../redux/Actions/auth';
 
-export default function LoginBox({ navigation }) {
+export default function LoginBox() {
+
+
     dispatch = useDispatch();
 
     const [emailEnter, SetEmailEnter] = useState('');
@@ -39,7 +41,7 @@ export default function LoginBox({ navigation }) {
     }
 
 
-    // code for show or hide the password
+    // ------------------------------------code for show or hide the password-------------------------------------------
     const [passwordVisible, setPasswordVisible] = useState(true)
 
     function handleCheck() {
@@ -49,7 +51,7 @@ export default function LoginBox({ navigation }) {
             setPasswordVisible(true)
         }
     }
-
+    // -------------------------------------------------------------------------------------------------------------------------
     return (
         <View>
             <View style={Styles.logInView}>
@@ -59,42 +61,55 @@ export default function LoginBox({ navigation }) {
                     } style={Styles.placeHolderStyle}></TextInput>
             </View>
             {
-                email ? <Text style={{ textAlign: 'center', color: 'red' }}>Email should not be empty</Text> : null
+                email ? <Text style={Styles.error}>Email should not be empty</Text> : null
             }
+
+
+
             <View style={Styles.logInView}>
                 <TextInput placeholder='Amazon password' placeholderTextColor={'grey'}
-                secureTextEntry = {passwordVisible}
+                    secureTextEntry={passwordVisible}
                     onChangeText={
                         (value) => setPasswordEnter(value)
                     }
                     style={Styles.placeHolderStyle}></TextInput>
             </View>
             {
-                password ? <Text style={{ textAlign: 'center', color: 'red' }}>password should not be empty</Text> : null
+                password ? <Text style={Styles.error}>password should not be empty</Text> : null
             }
-            <View style={Styles.checkView}>
 
+
+
+            <View style={Styles.checkView}>
                 <CheckBox
-                    // onPress={handleCheck}
                     style={Styles.checkBoxStyle}
                     boxType="square"
-                    // value={check}
                     onChange={handleCheck} />
 
                 <Text style={Styles.showStyle}> Show password</Text>
             </View>
+
+
+
 
             <TouchableOpacity onPress={() => logInFunction()}>
                 <View style={Styles.signInView}>
                     <Text style={Styles.signInText}>sign-In</Text>
                 </View>
             </TouchableOpacity>
+
+
             <View style={Styles.conditionView}>
                 <Text style={Styles.conditonText}>By continuing, you agree to Amazon's Conditions of Use and privacy Notice.</Text>
             </View>
+
+
+
             <Divider orientation='center' >
                 <Text style={Styles.amazonText}>  New to Amazon?</Text>
             </Divider>
+
+
         </View>
     )
 }

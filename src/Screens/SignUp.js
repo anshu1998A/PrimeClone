@@ -3,6 +3,8 @@ import { Text, View, Image, SafeAreaView, TextInput, TouchableOpacity } from 're
 import CheckBox from '@react-native-community/checkbox';
 import Styles from '../styles/secondStyle';
 import homeStyle from '../styles/homePageStyle';
+import navigationString from '../navigation/navigationString';
+import imagePath from '../constants/imagePath';
 
 export default function SignUp({ navigation }) {
     const [emailEnter, SetEmailEnter] = useState('');
@@ -61,13 +63,15 @@ export default function SignUp({ navigation }) {
     }
 
     return (
-        <View style={{ backgroundColor: '#3b3737', flex: 1 }}>
+        <View style={Styles.signUpMainView}>
             <View >
                 <Text style={homeStyle.PMImage}>prime video</Text>
-                <Image style={homeStyle.logoStyle} source={require('../assets/images/MoviesImages/MenuIcons/smile.png')}></Image>
+                <Image style={homeStyle.logoStyle} source={imagePath.smile}></Image>
             </View>
 
-            <Text style={Styles.signUpTittletext}>Sign-Up with your Mobile number</Text>
+            <Text style={Styles.signUpTittletext}> 
+            Sign-Up with your Mobile number
+            </Text>
 
             <View style={Styles.signUpView}>
                 <TextInput
@@ -79,8 +83,12 @@ export default function SignUp({ navigation }) {
                     } ></TextInput>
             </View>
             {
-                email ? <Text style={{ textAlign: 'center', color: 'red' }}>Email should not be empty</Text> : null
+                email ? <Text style={Styles.error}>
+                    Email should not be empty
+                    </Text> 
+                    : null
             }
+
             <View style={Styles.signUpView}>
                 <TextInput placeholder='Set your password' placeholderTextColor={'grey'}
                     secureTextEntry={passwordVisible}
@@ -89,29 +97,36 @@ export default function SignUp({ navigation }) {
                     } style={Styles.placeHolderStyle}></TextInput>
             </View>
             {
-                password ? <Text style={{ textAlign: 'center', color: 'red' }}>password should not be empty</Text> : null
+                password ? <Text style={Styles.error}>
+                    password should not be empty
+                    </Text> 
+                    : null
             }
+
             <View style={Styles.signUpView}>
                 <TextInput placeholder='Confirm your password' placeholderTextColor={'grey'}
-                    secureTextEntry={passwordVisible} onChangeText={
-                        (value) => setConfirmPass(value)} style={Styles.placeHolderStyle}></TextInput>
+                    secureTextEntry={passwordVisible} 
+                    onChangeText={
+                        (value) => setConfirmPass(value)
+                        } 
+                        style={Styles.placeHolderStyle}>
+                            </TextInput>
             </View>
             {
-                cPass ? <Text style={{ textAlign: 'center', color: 'red' }}>password should not be empty</Text> : null
+                cPass ? <Text style={Styles.error}>password should not be empty</Text> : null
             }
-
 
             {
 
-                errorPass ? <Text style={{ textAlign: 'center', color: 'red' }}> password does not match</Text> : null
+                errorPass ? <Text style={Styles.error}> password does not match</Text> : null
             }
+
+
             <View style={Styles.checkView}>
 
                 <CheckBox
-                    // onPress={handleCheck}
                     style={Styles.checkBoxStyle}
                     boxType="square"
-                    // value={check}
                     onChange={handleCheck} />
 
                 <Text style={Styles.showStyle}> Show password</Text>
@@ -129,7 +144,10 @@ export default function SignUp({ navigation }) {
             
                 <View style={Styles.accountView}>
                 <TouchableOpacity >
-                    <Text style={Styles.accountText} onPress={() => { navigation.navigate('LogIn') }}>Already have an account?</Text>
+                    <Text style={Styles.accountText}
+                     onPress={() => { navigation.navigate(navigationString.LOGIN) }}>
+                         Already have an account?
+                         </Text>
                     </TouchableOpacity>
                 </View>
 
@@ -137,17 +155,25 @@ export default function SignUp({ navigation }) {
 
             <View>
                 <Text style={Styles.messageText}>
-                    Message and Data raetes may apply.
+                    Message and Data rates may apply.
                 </Text>
             </View>
+
+
             <View style={Styles.conditionView}>
-                <Text style={Styles.conditonText}>By continuing, you agree to Amazon's Conditions of Use and privacy Notice.</Text>
+                <Text style={Styles.conditonText}>
+                    By continuing, you agree to Amazon's Conditions of Use and privacy Notice.
+                    </Text>
             </View>
+
+
             <View style={Styles.footerViewStyle}>
                 <Text style={Styles.footerTextStyle}>Conditions of Use</Text>
                 <Text style={Styles.footerTextStyle}> privacy</Text>
                 <Text style={Styles.footerTextStyle}>Help</Text>
             </View>
+
+
             <View style={Styles.copyRightView}>
                 <Text style={Styles.copyRight}> © 1996-2022, Amazon.com, Inc. or its affiliates</Text>
             </View>

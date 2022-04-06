@@ -6,10 +6,10 @@ import imagePath from '../constants/imagePath';
 
 export default function LoginHeader() {
   return (
-    <SafeAreaView style={{ backgroundColor: '#3b3737'}}>
+    <SafeAreaView >
                 <View >
                     <Text style={homeStyle.PMImage}>prime video</Text>
-                    <Image style={homeStyle.logoStyle} source={require('../assets/images/MoviesImages/MenuIcons/smile.png')}></Image>
+                    <Image style={homeStyle.logoStyle} source={imagePath.smile}></Image>
                 </View>
             
             <Text style={Styles.tittletext}>Sign-In</Text>

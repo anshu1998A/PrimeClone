@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import Home from '../Screens/Home';
 import HomeStyle from '../styles/homePageStyle';
 import imagePath from '../constants/imagePath';
+import navigationString from './navigationString';
 const TopTab = createMaterialTopTabNavigator();
 export default function HomeTab() {
     return (
@@ -15,10 +16,10 @@ export default function HomeTab() {
                 </View>
             </View>
             <TopTab.Navigator screenOptions={{ swipeEnabled: false, tabBarLabelStyle: { fontSize: 12,  fontWeight:'500' }, tabBarStyle: { backgroundColor: '#232F3E' }, tabBarActiveTintColor:'white', tabBarInactiveTintColor:'white' }} >
-                <TopTab.Screen name='Home' component={Home} headerTintColor={'red'} />
-                <TopTab.Screen name='TVShows' component={Home} />
-                <TopTab.Screen name='Movies' component={Home} />
-                <TopTab.Screen name='Kids' component={Home} />
+                <TopTab.Screen name={navigationString.HOME} component={Home} headerTintColor={'red'} />
+                <TopTab.Screen name={navigationString.TVSHOWS} component={Home} />
+                <TopTab.Screen name={navigationString.TOP_MOVIES} component={Home} />
+                <TopTab.Screen name={navigationString.KIDS} component={Home} />
             </TopTab.Navigator>
         </>
 
